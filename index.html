@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIB</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="preloader">
+        <img src="./media/loading.gif"/>
+    </div>
+    <header>
+        <div class="logo"><img src="./media/favicon.ico"  height="30px" width="30px"/><h2>NARUTOMINATION</h2></div>
+        <div class="top-header"> <img src="./media/star.png"  height="40px" width="40px"/><h1>My Naruto Gallery</h1></div>
+    </header>
+    <div class="gallery-image">
+        <div class="img-box">
+          <img src="./media/naruto.jpg" id="myImg" onclick='bigImgView(this.src)' alt="Snow" />
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Naruto Uzumaki</p>
+                <p class="opacity-low">Hidden Leaf</p>
+            </div>
+          </div> 
+        </div>
+        <div class="img-box">
+          <img src="./media/sasuke.jpg" id="myImg"  onclick='bigImgView(this.src)' alt="Snow" />
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Sasuke Uchiha</p>
+                <p class="opacity-low">Hidden Leaf</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="./media/kakashi.jpg" id="myImg"  onclick='bigImgView(this.src)' alt="Snow" />
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Hatake Kakashi</p>
+                <p class="opacity-low">Hidden Leaf</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="./media/minato.jpg" id="myImg"  onclick='bigImgView(this.src)' alt="Snow"/>
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Minato Namikaze</p>
+                <p class="opacity-low">Hidden Leaf</p>
+            </div>
+          </div> 
+        </div>
+        <div class="img-box">
+          <img src="./media/kurenai.jpg" id="myImg"  onclick='bigImgView(this.src)' alt="Snow" />
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Kurenai Yuhi</p>
+                <p class="opacity-low">Hidden Leaf</p>
+            </div>
+          </div> 
+        </div>
+        <div class="img-box">
+          <img src="./media/gaara.jpg" id="myImg"  onclick='bigImgView(this.src)' alt="Snow" />
+          <div class="transparent-box">
+            <div class="caption">
+                <p>Gaara</p>
+                <p class="opacity-low">Hidden Sand</p>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="quote">
+          <div class="comma">
+              <img src="./media/doubleInvertedComma.png" alt="" width="40px" height="40px"/>
+          </div>
+          <div><h3>Those Who Break The Rules Are Scum... 
+              But, Those Who Abandon Their Friends Are Worse Than Scum. - Kakashi</h3>
+              <br>
+            </div>
+            <div><h3>The True Measure Of A Shinobi Is Not How He Lives, But How He Dies - Jiraiya</h3>
+            <br>
+         </div>
+         <div><h3>Those Who Do Not Understand True Pain Can Never Understand True Peace. - Pain</h3>
+          </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Gallery</h3>
+            <ul>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Picks</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Marketplace</h3>
+            <ul>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Best selling</a></li>
+              <li><a href="#">Latest</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Magazine</h3>
+            <ul>
+              <li><a href="#">Art skills</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Inspiration</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-section form">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter to get your weekly dose of news,updates,tips and special offers.</p>
+         <input type="email" placeholder="Enter your email address">
+         <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; Prakhar Chauhan
+        </div>
+      </footer>
+      <script>
+    
+    window.onload = function(){
+        document.querySelector(".preloader").style.display = "none";
+    }
+      let bigImgView = (imgSrc) => {
+        let divP = document.createElement('DIV');
+        let spanC = document.createElement('SPAN');
+        let imgC = document.createElement("IMG");
+
+        divP.setAttribute('class', 'bib-modal');
+        spanC.setAttribute('class', 'bib-close');
+        imgC.setAttribute('class', 'bib-modal-content');
+        imgC.setAttribute('src', imgSrc);
+
+        spanC.innerHTML = '&times;';
+        spanC.onclick = function(){
+            this.parentElement.remove();
+        }
+
+        divP.appendChild(spanC);
+        divP.appendChild(imgC);
+    
+        document.body.appendChild(divP);
+        divP.style.display = 'block';
+        console.log("Big image");
+    
+    }
+    
+    
+    </script>
+
+
+</body>
+</html>
