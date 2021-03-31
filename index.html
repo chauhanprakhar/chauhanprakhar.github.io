@@ -5,9 +5,6 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
-    <div class="preloader">
-        <img src="./media/loading.gif"/>
-    </div>
     <header>
         <div class="logo"><img src="./media/favicon.ico"  height="30px" width="30px"/><h2>NARUTOMINATION</h2></div>
         <div class="top-header"> <img src="./media/star.png"  height="40px" width="40px"/><h1>My Naruto Gallery</h1></div>
@@ -122,9 +119,6 @@
       </footer>
       <script>
     
-    window.onload = function(){
-        document.querySelector(".preloader").style.display = "none";
-    }
       let bigImgView = (imgSrc) => {
         let divP = document.createElement('DIV');
         let spanC = document.createElement('SPAN');
